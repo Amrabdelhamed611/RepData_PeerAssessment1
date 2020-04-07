@@ -184,9 +184,10 @@ g <- ggplot(dataByWE, aes(y = steps, x = daytime,col = factor(weekends)))
 (g  + geom_line()
     + facet_grid(.~factor(weekends)) 
     + labs(y = "steps mean" , x = "day time")
+    + guides(color=guide_legend(" ")) 
     + labs(title = "mean of total steps taken per day time", lwd = 3)
     + scale_x_datetime(date_labels = "%H:%M", date_breaks = "5 hours")
-)
 
+)
 ```
 
